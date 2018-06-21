@@ -9,15 +9,25 @@ namespace Parking.business
     {
         public Ticket gerarTicket()
         {
-        return null;
+            Ticket ticket = new Ticket();
+            ticket.dataHoraEmissao = DateTime.Now;
+            ticket.dataHoraValidade = ticket.dataHoraEmissao.AddMinutes(15);
+            ticket.especial = false;
+            return ticket;
         }
-        public bool ConsultaTicket(Ticket ticket)
+
+        public bool consultaTicket(Ticket ticket)
         {
-        return true;
+            DateTime dataHoraAtual = DateTime.Now;
+            if (dataHoraAtual <= ticket.dataHoraValidade)
+                return true;
+            else
+                return false;
         }
+
         public void registraSaida(Ticket ticket)
         {
-
+            //Falta isso
         }
     }
 }

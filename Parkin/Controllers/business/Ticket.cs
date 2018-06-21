@@ -7,7 +7,9 @@ namespace Parking.business
 {
     public class Ticket
     {
-        public int codigo { get; set; }
+        public int id { get; set; }
         public DateTime dataHoraEmissao { get; set; }
+        public DateTime dataHoraValidade { get; set; }
+        public Boolean especial { get; set; }
     }
 }

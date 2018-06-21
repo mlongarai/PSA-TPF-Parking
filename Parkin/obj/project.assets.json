@@ -12543,11 +12543,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\15104044\\Desktop\\PSA-TPF-Parking\\Parkin\\Parkin\\Parkin.csproj",
+      "projectUniqueName": "C:\\Users\\15104044\\Desktop\\PSA-TPF-Parking\\Parkin\\Parkin.csproj",
       "projectName": "Parkin",
-      "projectPath": "C:\\Users\\15104044\\Desktop\\PSA-TPF-Parking\\Parkin\\Parkin\\Parkin.csproj",
+      "projectPath": "C:\\Users\\15104044\\Desktop\\PSA-TPF-Parking\\Parkin\\Parkin.csproj",
       "packagesPath": "C:\\Users\\15104044\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\15104044\\Desktop\\PSA-TPF-Parking\\Parkin\\Parkin\\obj\\",
+      "outputPath": "C:\\Users\\15104044\\Desktop\\PSA-TPF-Parking\\Parkin\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

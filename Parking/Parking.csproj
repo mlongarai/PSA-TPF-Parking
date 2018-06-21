@@ -7,15 +7,19 @@
   <ItemGroup>
     <Compile Remove="Controllers\NovaPasta1\**" />
     <Compile Remove="Controllers\NovaPasta2\**" />
+    <Compile Remove="Controllers\NovaPasta3\**" />
     <Compile Remove="Controllers\NovaPasta\**" />
     <Content Remove="Controllers\NovaPasta1\**" />
     <Content Remove="Controllers\NovaPasta2\**" />
+    <Content Remove="Controllers\NovaPasta3\**" />
     <Content Remove="Controllers\NovaPasta\**" />
     <EmbeddedResource Remove="Controllers\NovaPasta1\**" />
     <EmbeddedResource Remove="Controllers\NovaPasta2\**" />
+    <EmbeddedResource Remove="Controllers\NovaPasta3\**" />
     <EmbeddedResource Remove="Controllers\NovaPasta\**" />
     <None Remove="Controllers\NovaPasta1\**" />
     <None Remove="Controllers\NovaPasta2\**" />
+    <None Remove="Controllers\NovaPasta3\**" />
     <None Remove="Controllers\NovaPasta\**" />
   </ItemGroup>
 
@@ -25,10 +29,6 @@
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\NovaPasta3\" />
   </ItemGroup>
 
 </Project>

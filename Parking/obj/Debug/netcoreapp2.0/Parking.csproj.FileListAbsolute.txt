@@ -1,0 +1,11 @@
+C:\Users\15104044\Desktop\PSA-TPF-Parking\Parking\Parking\bin\Debug\netcoreapp2.0\Parking.deps.json
+C:\Users\15104044\Desktop\PSA-TPF-Parking\Parking\Parking\bin\Debug\netcoreapp2.0\Parking.runtimeconfig.json
+C:\Users\15104044\Desktop\PSA-TPF-Parking\Parking\Parking\bin\Debug\netcoreapp2.0\Parking.runtimeconfig.dev.json
+C:\Users\15104044\Desktop\PSA-TPF-Parking\Parking\Parking\bin\Debug\netcoreapp2.0\Parking.dll
+C:\Users\15104044\Desktop\PSA-TPF-Parking\Parking\Parking\bin\Debug\netcoreapp2.0\Parking.pdb
+C:\Users\15104044\Desktop\PSA-TPF-Parking\Parking\Parking\obj\Debug\netcoreapp2.0\Parking.csprojResolveAssemblyReference.cache
+C:\Users\15104044\Desktop\PSA-TPF-Parking\Parking\Parking\obj\Debug\netcoreapp2.0\Parking.csproj.CoreCompileInputs.cache
+C:\Users\15104044\Desktop\PSA-TPF-Parking\Parking\Parking\obj\Debug\netcoreapp2.0\Parking.AssemblyInfoInputs.cache
+C:\Users\15104044\Desktop\PSA-TPF-Parking\Parking\Parking\obj\Debug\netcoreapp2.0\Parking.AssemblyInfo.cs
+C:\Users\15104044\Desktop\PSA-TPF-Parking\Parking\Parking\obj\Debug\netcoreapp2.0\Parking.dll
+C:\Users\15104044\Desktop\PSA-TPF-Parking\Parking\Parking\obj\Debug\netcoreapp2.0\Parking.pdb

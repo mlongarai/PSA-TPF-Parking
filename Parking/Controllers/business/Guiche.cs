@@ -1,4 +1,5 @@
 ﻿using Parking.business;
+using Parking.Controllers.business;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +9,7 @@ namespace Parkin.Controllers.business
 {
     public class Guiche
     {
-        public Guiche()
-        {
-        }
-
+        int idade = 10;
         public Ticket emissaoTicketExtraviado()
         {
             Ticket ticket = new Ticket();
@@ -22,7 +20,7 @@ namespace Parkin.Controllers.business
         public float calculaValorTicket(Ticket ticket)
         {
             //Ticket Extraviado
-            if (ticket.especial = true)
+            if (ticket.especial == true)
             {
                 return 30;
             }
@@ -43,14 +41,14 @@ namespace Parkin.Controllers.business
                 return 30;
             }
             //Ticket acima de três horas
-            if (dataHoraAtual.Date == ticket.dataHoraEmissao && permanencia > 180)
+            if (dataHoraAtual.Date == ticket.dataHoraEmissao.Date && permanencia > 180)
             {
                 return 10;
             }
             return 0;
         }
 
-        public void liberacaoTicket (Ticket ticket)
+        public void liberacaoTicket(Ticket ticket)
         {
             DateTime dataHoraAtual = DateTime.Now;
             float valorCobrado = calculaValorTicket(ticket);
@@ -58,43 +56,15 @@ namespace Parkin.Controllers.business
             {
                 ticket.dataHoraValidade.AddHours(3);
 
-            } else if (ticket.dataHoraEmissao.Hour >= 8 && ticket.dataHoraEmissao.Hour <= 23)
-            {
-                ticket.dataHoraValidade = ChangeTime(DateTime.Now, 02, 00, 00).AddDays(1);
-            } else if( ticket.dataHoraEmissao.Hour >= 0 && ticket.dataHoraEmissao.Hour < 2)
-            {
-                ticket.dataHoraValidade = ChangeTime(DateTime.Now, 02, 00, 00);
             }
-            
- 
-        }
-
-        public static DateTime ChangeTime(this DateTime dateTime, int hours, int minutes, int seconds)
-        {
-            return new DateTime(
-                dateTime.Year,
-                dateTime.Month,
-                dateTime.Day,
-                hours,
-                minutes,
-                seconds,
-                dateTime.Millisecond,
-                dateTime.Kind);
-        }
-
-        public override bool Equals(object obj)
-        {
-            return base.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
-
-        public override string ToString()
-        {
-            return base.ToString();
+            else if (ticket.dataHoraEmissao.Hour >= 8 && ticket.dataHoraEmissao.Hour <= 23)
+            {
+                ticket.dataHoraValidade = Utils.alterarHora(DateTime.Now, 02, 00, 00).AddDays(1);
+            }
+            else if (ticket.dataHoraEmissao.Hour >= 0 && ticket.dataHoraEmissao.Hour < 2)
+            {
+                ticket.dataHoraValidade = Utils.alterarHora(DateTime.Now, 02, 00, 00);
+            }
         }
     }
 }

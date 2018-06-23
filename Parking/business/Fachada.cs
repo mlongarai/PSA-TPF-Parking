@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Parkin.Controllers.business
+namespace Parkin.business
 {
     public class Fachada
     {

@@ -30,6 +30,7 @@ namespace Parking
                 }
                 #endregion
             }
+            BuildWebHost(args).Run();
             Console.ReadKey();
             // BuildWebHost(args).Run();
         }

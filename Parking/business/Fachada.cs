@@ -19,9 +19,9 @@ namespace Parkin.business
             return cancela.gerarTicket();
         }
 
-        public bool consultaTicket(Ticket ticket)
+        public bool consultaTicket(int id)
         {
-            return cancela.consultaTicket(ticket);
+            return cancela.consultaTicket(id);
         }
 
         public void registraSaida(Ticket ticket)

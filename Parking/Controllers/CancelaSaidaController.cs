@@ -11,15 +11,15 @@ using Parking.Models;
 
 namespace Parking.Controllers
 {
-    public class CancelaEntradaController : Controller
+    public class CancelaSaidaController : Controller
     {
         Fachada fachada = new Fachada();
         // 
         // GET: /CancelaEntrada/GerarTicket
 
-        public IActionResult GerarTicket()
+        public IActionResult ConsultaTicket(int id)
         {
-            return Ok(fachada.gerarTicket());
+            return Ok(fachada.consultaTicket(id));
         }
 
     }

@@ -11,12 +11,13 @@ namespace Parking.Models
 {
     public class ParkingContext : DbContext
     {
-        public ParkingContext(DbContextOptions<ParkingContext> options)
-            : base(options)
-        {
-        }
+       // public ParkingContext(DbContextOptions<ParkingContext> options)
+       //     : base(options)
+       // {
+       // }
 
-        public DbSet<Ticket> Parking { get; set; }
+
+        public DbSet<Ticket> Tickets { get; set; }
 
         public static readonly LoggerFactory FabricaLogger = new LoggerFactory(new[] { new
 ConsoleLoggerProvider((_, __) => true, true) });

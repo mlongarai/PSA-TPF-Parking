@@ -26,14 +26,17 @@ namespace Parking.business
             if (ticket == null)
                 return false;
             if (dataHoraAtual <= ticket.dataHoraValidade)
+            {
+                registraSaida(ticket);
                 return true;
+            }
             else
                 return false;
         }
 
         public void registraSaida(Ticket ticket)
         {
-            //Falta isso
+            //Falta criar log disso!
         }
     }
 }

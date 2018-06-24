@@ -1,5 +1,6 @@
 ﻿using Parking.business;
 using Parking.Controllers;
+using Parking.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,16 +10,18 @@ namespace Parkin.business
 {
     public class Guiche
     {
-
+        ParkingContext bd = new ParkingContext();
         public Ticket emissaoTicketExtraviado()
         {
             Ticket ticket = new Ticket();
             ticket.especial = true;
+            bd.Tickets.Add(ticket);
             return ticket;
         }
 
-        public float calculaValorTicket(Ticket ticket)
+        public float calculaValorTicket(int id)
         {
+            Ticket ticket = bd.Tickets.Find(id);
             //Ticket Extraviado
             if (ticket.especial == true)
             {
@@ -48,10 +51,11 @@ namespace Parkin.business
             return 0;
         }
 
-        public void liberacaoTicket(Ticket ticket)
+        public void liberacaoTicket(int id)
         {
+            Ticket ticket = bd.Tickets.Find(id);
             DateTime dataHoraAtual = DateTime.Now;
-            float valorCobrado = calculaValorTicket(ticket);
+            float valorCobrado = calculaValorTicket(id);
             if (valorCobrado == 5)
             {
                 ticket.dataHoraValidade.AddHours(3);

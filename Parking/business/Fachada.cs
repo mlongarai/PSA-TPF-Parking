@@ -13,6 +13,7 @@ namespace Parkin.business
 
         }
         Cancela cancela = new Cancela();
+        Guiche guiche = new Guiche();
 
         public Ticket gerarTicket()
         {
@@ -27,6 +28,21 @@ namespace Parkin.business
         public void registraSaida(Ticket ticket)
         {
             cancela.registraSaida(ticket);
+        }
+
+        public Ticket emissaoTicketExtraviado()
+        {
+            return guiche.emissaoTicketExtraviado();
+        }
+
+        public float calculaValorTicket(int id)
+        {
+            return guiche.calculaValorTicket(id);
+        }
+
+        public void liberacaoTicket(int id)
+        {
+            guiche.liberacaoTicket(id);
         }
     }
 }

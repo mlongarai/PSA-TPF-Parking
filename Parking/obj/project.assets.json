@@ -12662,23 +12662,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Douglas\\.nuget\\packages\\": {},
+    "C:\\Users\\BOTELHO\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Douglas\\Desktop\\PSA\\Parking\\Parking.csproj",
+      "projectUniqueName": "C:\\Users\\BOTELHO\\Desktop\\ANDRÉ\\PUCRS\\PSA\\PSA-TPF-Parking\\Parking\\Parking.csproj",
       "projectName": "Parking",
-      "projectPath": "C:\\Users\\Douglas\\Desktop\\PSA\\Parking\\Parking.csproj",
-      "packagesPath": "C:\\Users\\Douglas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Douglas\\Desktop\\PSA\\Parking\\obj\\",
+      "projectPath": "C:\\Users\\BOTELHO\\Desktop\\ANDRÉ\\PUCRS\\PSA\\PSA-TPF-Parking\\Parking\\Parking.csproj",
+      "packagesPath": "C:\\Users\\BOTELHO\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\BOTELHO\\Desktop\\ANDRÉ\\PUCRS\\PSA\\PSA-TPF-Parking\\Parking\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Douglas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\BOTELHO\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

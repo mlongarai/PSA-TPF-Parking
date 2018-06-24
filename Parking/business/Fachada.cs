@@ -8,6 +8,10 @@ namespace Parkin.business
 {
     public class Fachada
     {
+        public Fachada()
+        {
+
+        }
         Cancela cancela = new Cancela();
 
         public Ticket gerarTicket()

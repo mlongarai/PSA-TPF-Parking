@@ -14,20 +14,28 @@ namespace Parkin.business
         public Ticket emissaoTicketExtraviado()
         {
             Ticket ticket = new Ticket();
+            ticket.dataHoraEmissao = DateTime.Now;
+            ticket.dataHoraValidade = DateTime.Now;
             ticket.especial = true;
             bd.Tickets.Add(ticket);
+            bd.SaveChanges();
             return ticket;
         }
 
         public float calculaValorTicket(int id)
         {
+            DateTime dataHoraAtual = DateTime.Now;
             Ticket ticket = bd.Tickets.Find(id);
+            if (ticket == null)
+                return -1;
             //Ticket Extraviado
             if (ticket.especial == true)
             {
                 return 30;
             }
-            DateTime dataHoraAtual = DateTime.Now;
+            //Ticket valido
+            if (ticket.dataHoraValidade <= dataHoraAtual)
+                return 0;
             double permanencia = (dataHoraAtual - ticket.dataHoraEmissao).TotalMinutes;
             //Ticket menos de 3 horas
             if (permanencia <= 180)
@@ -48,7 +56,7 @@ namespace Parkin.business
             {
                 return 10;
             }
-            return 0;
+            return -1;
         }
 
         public void liberacaoTicket(int id)

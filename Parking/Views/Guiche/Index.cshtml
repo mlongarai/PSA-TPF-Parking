@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-3">
+        <h2>Emissão</h2>
+        <ul>
+            <li><a asp-action="GerarTicketExtraviado">Emissão de Ticket Extraviado</a></li>
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <h2>Guiche</h2>
+        <ul>
+            <form method="post" asp-action="calculaValorTicket">
+                <input type="text" name="id" />
+                <input type="submit" value="Calculo do valor do Ticket" formmethod="post" />
+            </form>
+            <form method="post" asp-action="liberacaoTicket">
+                <input type="text" name="id" />
+                <input type="submit" value="Liberação do Ticket" formmethod="post" />
+            </form>
+        </ul>
+    </div>
+</div>

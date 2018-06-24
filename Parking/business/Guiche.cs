@@ -34,7 +34,7 @@ namespace Parkin.business
                 return 30;
             }
             //Ticket valido
-            if (ticket.dataHoraValidade <= dataHoraAtual)
+            if (ticket.dataHoraValidade >= dataHoraAtual)
                 return 0;
             double permanencia = (dataHoraAtual - ticket.dataHoraEmissao).TotalMinutes;
             //Ticket menos de 3 horas
@@ -59,14 +59,14 @@ namespace Parkin.business
             return -1;
         }
 
-        public void liberacaoTicket(int id)
+        public bool liberacaoTicket(int id)
         {
             Ticket ticket = bd.Tickets.Find(id);
             DateTime dataHoraAtual = DateTime.Now;
             float valorCobrado = calculaValorTicket(id);
             if (valorCobrado == 5)
             {
-                ticket.dataHoraValidade.AddHours(3);
+                ticket.dataHoraValidade = ticket.dataHoraValidade.AddMinutes(180);
 
             }
             else if (ticket.dataHoraEmissao.Hour >= 8 && ticket.dataHoraEmissao.Hour <= 23)
@@ -77,6 +77,9 @@ namespace Parkin.business
             {
                 ticket.dataHoraValidade = Utils.alterarHora(DateTime.Now, 02, 00, 00);
             }
+            bd.Tickets.Update(ticket);
+            bd.SaveChanges();
+            return true;
         }
     }
 }

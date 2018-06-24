@@ -41,8 +41,8 @@ namespace Parking.Controllers
 
         public IActionResult liberacaoTicket(int id)
         {
-            fachada.liberacaoTicket(id);
-            return Ok();
+            
+            return Ok(fachada.liberacaoTicket(id));
         }
     }
 }

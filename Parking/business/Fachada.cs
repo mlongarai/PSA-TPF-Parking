@@ -40,9 +40,9 @@ namespace Parkin.business
             return guiche.calculaValorTicket(id);
         }
 
-        public void liberacaoTicket(int id)
+        public bool liberacaoTicket(int id)
         {
-            guiche.liberacaoTicket(id);
+            return guiche.liberacaoTicket(id);
         }
     }
 }

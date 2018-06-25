@@ -17,5 +17,11 @@ namespace Parking.Controllers
             //ViewData ["tickets"] = fachada.listarTickets();
             return View(fachada.listarTickets());
         }
+
+        public IActionResult tickets(String dataEntrada, String dataSaida)
+        {
+            
+            return Ok(fachada.listarTickets());
+        }
     }
 }

@@ -16,7 +16,8 @@ namespace Parking.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     dataHoraEmissao = table.Column<DateTime>(nullable: false),
                     dataHoraValidade = table.Column<DateTime>(nullable: false),
-                    especial = table.Column<bool>(nullable: false)
+                    especial = table.Column<bool>(nullable: false),
+                    valorCobrado = table.Column<double>(nullable: true)
                 },
                 constraints: table =>
                 {

@@ -77,6 +77,7 @@ namespace Parkin.business
             {
                 ticket.dataHoraValidade = Utils.alterarHora(DateTime.Now, 02, 00, 00);
             }
+            ticket.valorCobrado = valorCobrado;
             bd.Tickets.Update(ticket);
             bd.SaveChanges();
             return true;

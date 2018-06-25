@@ -1,13 +1,60 @@
-﻿Bem-vindo!
-@model IEnumerable<Parking.business.Ticket>
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-@{
-    ViewData["Title"] = "dataHoraEmissao";
-}
+        #myInput {
+            background-image: url('/css/searchicon.png');
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
 
-<table>
-    @foreach (var item in Model)
-    {
+        #myTable {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid #ddd;
+            font-size: 18px;
+        }
+
+            #myTable th, #myTable td {
+                text-align: left;
+                padding: 12px;
+            }
+
+            #myTable tr {
+                border-bottom: 1px solid #ddd;
+            }
+
+                #myTable tr.header, #myTable tr:hover {
+                    background-color: #f1f1f1;
+                }
+    </style>
+</head>
+<body>
+
+    <h2>Tickets</h2>
+
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Procure pelas datas... " title="Ex: 05/2018">
+
+    <table id="myTable">
+        <tr class="header">
+            <th style="width:20%;">Id</th>
+            <th style="width:30%;">Data / Hora Emissão</th>
+            <th style="width:30%;">Data / Hora Validade</th>
+            <th style="width:20%;">Extraviado</th>
+            <th style="width:20%;">Valor</th>
+        </tr>
+        @foreach (var item in Model)
+        {
         <tr>
             <td>
                 @item.id
@@ -21,6 +68,45 @@
             <td>
                 @item.especial
             </td>
+            <td>
+                Valor
+            </td>
         </tr>
-    }
-</table>
+        }
+    </table>
+    Quantidade Total: <input disabled name="quantidade" id="quantidade" value="0" /> Valor total: <input disabled name="valor" id="valor" value="0" />
+    @section Scripts
+        {
+        <script>
+            $(document).ready(function () {
+                myFunction();
+            function myFunction() {
+                var valorTotal = 0;
+                var quantidadeTotal = 0;
+                var input, filter, table, tr, td, i;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("myTable");
+                tr = table.getElementsByTagName("tr");
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[1];
+                    if (td) {
+                        if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                            quantidadeTotal = quantidadeTotal + 1;
+                            valorTotal = valorTotal + 5;
+                            tr[i].style.display = "";
+                        } else {
+                            tr[i].style.display = "none";
+                        }
+                    }
+                }
+                quantidade.value = quantidadeTotal;
+                valor.value = valorTotal;
+            };
+        });
+        </script>
+        }
+
+    </body>
+</html>
+

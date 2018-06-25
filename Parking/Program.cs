@@ -44,12 +44,12 @@ namespace Parking
         {
             var tickets = new List<Ticket> {
                 //ReleaseDate = new DateTime(2017, 03, 24),
-                new Ticket { especial = false, dataHoraEmissao = DateTime.Now, dataHoraValidade = DateTime.Now.AddMinutes(15)},
-                new Ticket { especial = false, dataHoraEmissao = DateTime.Now, dataHoraValidade = DateTime.Now.AddMinutes(15)},
-                new Ticket { especial = false, dataHoraEmissao = DateTime.Now, dataHoraValidade = DateTime.Now.AddMinutes(15)},
-                new Ticket { especial = false, dataHoraEmissao = DateTime.Now, dataHoraValidade = DateTime.Now.AddMinutes(15)},
-                new Ticket { especial = true, dataHoraEmissao = DateTime.Now, dataHoraValidade = DateTime.Now.AddMinutes(15)},
-                new Ticket { especial = true, dataHoraEmissao = DateTime.Now, dataHoraValidade = DateTime.Now.AddMinutes(15)}
+                new Ticket { valorCobrado = 15,  especial = false, dataHoraEmissao = DateTime.Now.AddMinutes(-18), dataHoraValidade = DateTime.Now.AddMinutes(-3)},
+                new Ticket { valorCobrado = 20, especial = false, dataHoraEmissao = DateTime.Now.AddDays(-1), dataHoraValidade = DateTime.Now.AddMinutes(15).AddDays(-1)},
+                new Ticket { valorCobrado = 10, especial = false, dataHoraEmissao = DateTime.Now.AddHours(-3), dataHoraValidade = DateTime.Now.AddMinutes(15).AddHours(-3)},
+                new Ticket { valorCobrado = 5, especial = false, dataHoraEmissao = DateTime.Now, dataHoraValidade = DateTime.Now.AddMinutes(15)},
+                new Ticket { valorCobrado = 30, especial = true, dataHoraEmissao = DateTime.Now, dataHoraValidade = DateTime.Now.AddMinutes(15)},
+                new Ticket { valorCobrado = 30, especial = true, dataHoraEmissao = DateTime.Now, dataHoraValidade = DateTime.Now.AddMinutes(15)}
             };
 
             db.Tickets.AddRange(tickets);

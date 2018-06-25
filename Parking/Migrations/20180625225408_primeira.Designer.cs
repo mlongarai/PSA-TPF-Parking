@@ -10,8 +10,8 @@ using Parking.Models;
 namespace Parking.Migrations
 {
     [DbContext(typeof(ParkingContext))]
-    [Migration("20180624031804_V2")]
-    partial class V2
+    [Migration("20180625225408_primeira")]
+    partial class primeira
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -32,6 +32,8 @@ namespace Parking.Migrations
                     b.Property<DateTime>("dataHoraValidade");
 
                     b.Property<bool>("especial");
+
+                    b.Property<double>("valorCobrado");
 
                     b.HasKey("id");
 

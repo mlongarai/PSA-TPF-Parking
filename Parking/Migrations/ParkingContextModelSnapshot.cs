@@ -27,6 +27,8 @@ namespace Parking.Migrations
 
                     b.Property<DateTime>("dataHoraEmissao");
 
+                    b.Property<DateTime>("dataHoraSaida");
+
                     b.Property<DateTime>("dataHoraValidade");
 
                     b.Property<bool>("especial");

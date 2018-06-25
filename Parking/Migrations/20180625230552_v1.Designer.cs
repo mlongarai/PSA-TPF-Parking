@@ -10,8 +10,8 @@ using Parking.Models;
 namespace Parking.Migrations
 {
     [DbContext(typeof(ParkingContext))]
-    [Migration("20180625225408_primeira")]
-    partial class primeira
+    [Migration("20180625230552_v1")]
+    partial class v1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,6 +28,8 @@ namespace Parking.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("dataHoraEmissao");
+
+                    b.Property<DateTime>("dataHoraSaida");
 
                     b.Property<DateTime>("dataHoraValidade");
 

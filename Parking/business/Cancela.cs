@@ -36,7 +36,7 @@ namespace Parking.business
 
         public void registraSaida(Ticket ticket)
         {
-            //Falta criar log disso!
+            ticket.dataHoraSaida = DateTime.Now;
         }
     }
 }

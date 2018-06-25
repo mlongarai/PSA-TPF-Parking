@@ -12,6 +12,7 @@ namespace Parking.business
         public int id { get; set; }
         public DateTime dataHoraEmissao { get; set; }
         public DateTime dataHoraValidade { get; set; }
+        public DateTime dataHoraSaida { get; set; }
         public Boolean especial { get; set; }
         public double valorCobrado { get; set; } 
 

@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Parking.Migrations
 {
-    public partial class primeira : Migration
+    public partial class v1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -16,6 +16,7 @@ namespace Parking.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     dataHoraEmissao = table.Column<DateTime>(nullable: false),
                     dataHoraValidade = table.Column<DateTime>(nullable: false),
+                    dataHoraSaida = table.Column<DateTime>(nullable: false),
                     especial = table.Column<bool>(nullable: false),
                     valorCobrado = table.Column<double>(nullable: false)
                 },

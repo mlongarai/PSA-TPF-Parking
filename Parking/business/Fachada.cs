@@ -14,6 +14,12 @@ namespace Parkin.business
         }
         Cancela cancela = new Cancela();
         Guiche guiche = new Guiche();
+        Ticket ticket = new Ticket();
+
+        public List<Ticket> listarTickets()
+        {
+            return ticket.listarTickets();
+        }
 
         public Ticket gerarTicket()
         {

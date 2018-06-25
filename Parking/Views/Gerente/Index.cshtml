@@ -1,0 +1,26 @@
+﻿Bem-vindo!
+@model IEnumerable<Parking.business.Ticket>
+
+@{
+    ViewData["Title"] = "dataHoraEmissao";
+}
+
+<table>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.id
+            </td>
+            <td>
+                @item.dataHoraEmissao
+            </td>
+            <td>
+                @item.dataHoraValidade
+            </td>
+            <td>
+                @item.especial
+            </td>
+        </tr>
+    }
+</table>

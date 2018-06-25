@@ -31,6 +31,8 @@ namespace Parking.Migrations
 
                     b.Property<bool>("especial");
 
+                    b.Property<double>("valorCobrado");
+
                     b.HasKey("id");
 
                     b.ToTable("Tickets");

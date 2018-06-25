@@ -47,11 +47,11 @@
 
     <table id="myTable">
         <tr class="header">
-            <th style="width:20%;">Id</th>
+            <th style="width:10%;">Id</th>
             <th style="width:30%;">Data / Hora Emissão</th>
-            <th style="width:30%;">Data / Hora Validade</th>
+            <th style="width:30%;">Sistema Já Passei</th>
             <th style="width:20%;">Extraviado</th>
-            <th style="width:20%;">Valor</th>
+            <th style="width:15%;">Valor (R$)</th>
         </tr>
         @foreach (var item in Model)
         {
@@ -63,13 +63,13 @@
                 @item.dataHoraEmissao
             </td>
             <td>
-                @item.dataHoraValidade
+                -
             </td>
             <td>
                 @item.especial
             </td>
             <td>
-                Valor
+                @item.valorCobrado
             </td>
         </tr>
         }
@@ -78,8 +78,7 @@
     @section Scripts
         {
         <script>
-            $(document).ready(function () {
-                myFunction();
+            
             function myFunction() {
                 var valorTotal = 0;
                 var quantidadeTotal = 0;
@@ -93,7 +92,7 @@
                     if (td) {
                         if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
                             quantidadeTotal = quantidadeTotal + 1;
-                            valorTotal = valorTotal + 5;
+                            valorTotal = valorTotal + parseInt(tr[i].getElementsByTagName("td")[4].innerText);
                             tr[i].style.display = "";
                         } else {
                             tr[i].style.display = "none";
@@ -103,7 +102,9 @@
                 quantidade.value = quantidadeTotal;
                 valor.value = valorTotal;
             };
-        });
+            $(document).ready(function () {
+                myFunction();
+            });
         </script>
         }
 

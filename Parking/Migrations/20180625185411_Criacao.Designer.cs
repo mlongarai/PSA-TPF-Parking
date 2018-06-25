@@ -10,7 +10,7 @@ using Parking.Models;
 namespace Parking.Migrations
 {
     [DbContext(typeof(ParkingContext))]
-    [Migration("20180623202925_Criacao")]
+    [Migration("20180625185411_Criacao")]
     partial class Criacao
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,9 +33,11 @@ namespace Parking.Migrations
 
                     b.Property<bool>("especial");
 
+                    b.Property<double>("valorCobrado");
+
                     b.HasKey("id");
 
-                    b.ToTable("Parking");
+                    b.ToTable("Tickets");
                 });
 #pragma warning restore 612, 618
         }

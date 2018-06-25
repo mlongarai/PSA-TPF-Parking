@@ -13,6 +13,7 @@ namespace Parking.business
         public DateTime dataHoraEmissao { get; set; }
         public DateTime dataHoraValidade { get; set; }
         public Boolean especial { get; set; }
+        public double valorCobrado { get; set; } 
 
         public List<Ticket> listarTickets()
         {

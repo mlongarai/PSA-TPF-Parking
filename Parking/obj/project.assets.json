@@ -13343,24 +13343,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\BOTELHO\\.nuget\\packages\\": {},
+    "C:\\Users\\Wings\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\BOTELHO\\Desktop\\ANDRÉ\\PUCRS\\PSA-TPF-Parking\\Parking\\Parking.csproj",
+      "projectUniqueName": "C:\\Users\\Wings\\Desktop\\PSA-TPF-Parking\\Parking\\Parking.csproj",
       "projectName": "Parking",
-      "projectPath": "C:\\Users\\BOTELHO\\Desktop\\ANDRÉ\\PUCRS\\PSA-TPF-Parking\\Parking\\Parking.csproj",
-      "packagesPath": "C:\\Users\\BOTELHO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\BOTELHO\\Desktop\\ANDRÉ\\PUCRS\\PSA-TPF-Parking\\Parking\\obj\\",
+      "projectPath": "C:\\Users\\Wings\\Desktop\\PSA-TPF-Parking\\Parking\\Parking.csproj",
+      "packagesPath": "C:\\Users\\Wings\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Wings\\Desktop\\PSA-TPF-Parking\\Parking\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\BOTELHO\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Wings\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
